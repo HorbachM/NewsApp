@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  NewsApp
 //
-//  Created by Horbach on 14.04.19.
+//  Created by Horbach on 10.04.19.
 //  Copyright © 2019 Horbach. All rights reserved.
 //
 

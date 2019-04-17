@@ -20,6 +20,10 @@ class OneNewsViewController: UIViewController {
     
     @IBOutlet weak var labelDescription: UILabel!
     
+    @IBOutlet weak var labelAuthor: UILabel!
+    
+    @IBOutlet weak var labelSource: UILabel!
+    
     @IBAction func pushOpenAction(_ sender: Any) {
         if let url = URL(string: article.url) {
         let svc = SFSafariViewController(url: url)
@@ -31,6 +35,8 @@ class OneNewsViewController: UIViewController {
         super.viewDidLoad()
         labelTitle.text = article.title
         labelDescription.text =  article.description
+        labelSource.text = article.sourceName
+        labelAuthor.text = article.author
         
         DispatchQueue.main.async {
             if let ulr = URL(string: self.article.urlToImage) {
@@ -39,23 +45,6 @@ class OneNewsViewController: UIViewController {
                 }
             }
         }
-      /*  if URL(string: article.url) == nil {
-            якось потрібно скрити кнопку через аутлет
-        }
-    */
-        
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

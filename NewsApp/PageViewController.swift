@@ -10,11 +10,13 @@ import UIKit
 
 class PageViewController: UIPageViewController,UIPageViewControllerDataSource {
 
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
         
         self.showViewConrrollers()
+     
+        
         
         loadNews(){
             self.showViewConrrollers()
